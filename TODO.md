@@ -3,10 +3,11 @@ Make a webpage that gathers various random information from the internet.
 The primary source of information will be api-ninjas.com
 
 Sections:
-- [ ] Quotes
+- [x] Quotes
 - [ ] Random image of the day
 - [ ] Historical events (month, day) (Wikipedia better for this?)
-- [ ] Jokes / Dad jokes
+- [x] Dad jokes
+- [ ] Jokes
 - [ ] Trivia (reveal answer)
 - [ ] Riddles (reveal answer)
 - [ ] Facts
