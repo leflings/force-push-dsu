@@ -1,7 +1,9 @@
-import Image from 'next/image'
+import Quote from "@/components/quote";
 
 export default function Home() {
   return (
-    <p>Hi hello</p>
+    <>
+      <Quote/>
+    </>
   );
 }
