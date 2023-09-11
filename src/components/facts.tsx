@@ -1,5 +1,5 @@
 
-import { getFacts } from '@/lib/api-ninja';
+import { getFacts } from '@/lib/api-ninjas';
 import pluralize from 'pluralize';
 
 export default async function Facts({ limit = 1 }) {

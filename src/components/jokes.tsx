@@ -1,5 +1,5 @@
 
-import { getJokes } from '@/lib/api-ninja';
+import { getJokes } from '@/lib/api-ninjas';
 import pluralize from 'pluralize';
 
 export default async function Jokes({ limit = 1 }) {

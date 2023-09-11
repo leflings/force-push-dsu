@@ -1,4 +1,4 @@
-import { getDadJokes } from '@/lib/api-ninja';
+import { getDadJokes } from '@/lib/api-ninjas';
 import pluralize from 'pluralize';
 
 export default async function DadJokes({ limit = 1 }) {

@@ -1,4 +1,4 @@
-import { getQuote } from "@/lib/api-ninja";
+import { getQuote } from "@/lib/api-ninjas";
 
 export default async function Quote() {
     const quote = await getQuote();
