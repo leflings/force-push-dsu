@@ -45,6 +45,10 @@ export async function getDadJokes(request?: (ApiNinjasRequest & { limit?: number
     return await getFromApi<Joke>(`/dadjokes?limit=${request?.limit ?? 1}`, request);
 }
 
+export async function getJokes(request?: (ApiNinjasRequest & { limit?: number })): Promise<Joke[]> {
+    return await getFromApi<Joke>(`/jokes?limit=${request?.limit ?? 1}`, request);
+}
+
 export async function getQuote(request?: ApiNinjasRequest) {
     const quotes = await getFromApi<Quote>('/quotes');
     return quotes[0];

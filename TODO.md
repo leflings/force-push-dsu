@@ -7,7 +7,7 @@ Sections:
 - [ ] Random image of the day
 - [ ] Historical events (month, day) (Wikipedia better for this?)
 - [x] Dad jokes
-- [ ] Jokes
+- [x] Jokes
 - [ ] Trivia (reveal answer)
 - [ ] Riddles (reveal answer)
 - [ ] Facts

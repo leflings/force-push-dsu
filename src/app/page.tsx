@@ -1,4 +1,5 @@
-import DadJokes from "@/components/dad-joke";
+import DadJokes from "@/components/dad-jokes";
+import Jokes from "@/components/jokes";
 import Quote from "@/components/quote";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div className='gap-4 flex flex-col'>
       <Quote/>
       <DadJokes />
+      <Jokes />
     </div>
   );
 }
