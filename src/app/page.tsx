@@ -1,4 +1,5 @@
 import DadJokes from "@/components/dad-jokes";
+import Facts from "@/components/facts";
 import Jokes from "@/components/jokes";
 import Quote from "@/components/quote";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <Quote/>
       <DadJokes />
       <Jokes />
+      <Facts limit={5} />
     </div>
   );
 }

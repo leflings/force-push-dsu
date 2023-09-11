@@ -12,9 +12,15 @@ export type Quote = {
     category: string,
 };
 
+export type Fact = {
+    fact: string,
+};
+
 export type ApiNinjasRequest = {
     revalidate?: number,
-}
+};
+
+export type LimitedApiNinjasRequest = ApiNinjasRequest & { limit?: number };
 
 function getRevalidate(request?: ApiNinjasRequest) {
     const defaultRevalidate = process.env.API_NINJAS_TTL;
@@ -41,15 +47,19 @@ async function getFromApi<T>(path: string, request?: ApiNinjasRequest): Promise<
     return await response.json() as T[];
 }
 
-export async function getDadJokes(request?: (ApiNinjasRequest & { limit?: number })): Promise<Joke[]> {
+export async function getDadJokes(request?: LimitedApiNinjasRequest): Promise<Joke[]> {
     return await getFromApi<Joke>(`/dadjokes?limit=${request?.limit ?? 1}`, request);
 }
 
-export async function getJokes(request?: (ApiNinjasRequest & { limit?: number })): Promise<Joke[]> {
+export async function getJokes(request?: LimitedApiNinjasRequest): Promise<Joke[]> {
     return await getFromApi<Joke>(`/jokes?limit=${request?.limit ?? 1}`, request);
 }
 
 export async function getQuote(request?: ApiNinjasRequest) {
-    const quotes = await getFromApi<Quote>('/quotes');
+    const quotes = await getFromApi<Quote>('/quotes', request);
     return quotes[0];
+}
+
+export async function getFacts(request?: LimitedApiNinjasRequest): Promise<Fact[]> {
+    return await getFromApi<Fact>(`/facts?limit=${request?.limit ?? 1}`);
 }
