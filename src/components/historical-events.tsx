@@ -2,7 +2,7 @@ import { getHistoricalEvents } from "@/lib/api-ninjas";
 
 export default async function HistoricalEvents() {
     const date = new Date();
-    const args = { month: date.getMonth(), day: date.getDate() };
+    const args = { month: date.getMonth() + 1, day: date.getDate() };
     const events = await getHistoricalEvents(args);
 
     return (
